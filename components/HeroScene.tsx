@@ -125,8 +125,8 @@ export default function HeroScene() {
       uPixelRatio: { value: pixelRatio },
       uMouse: { value: new THREE.Vector2(99, 99) },
       uMouseStrength: { value: 0 },
-      uColorA: { value: new THREE.Color("#4fd1c5") },
-      uColorB: { value: new THREE.Color("#3b7bf6") },
+      uColorA: { value: new THREE.Color("#00d4ff") },
+      uColorB: { value: new THREE.Color("#0099cc") },
       uColorHi: { value: new THREE.Color("#e8eef6") },
     };
 
@@ -142,7 +142,7 @@ export default function HeroScene() {
     group.add(points);
 
     // --- Artboard frames ---
-    const frameMaterial = new THREE.LineBasicMaterial({ color: 0x4fd1c5, transparent: true, opacity: 0 });
+    const frameMaterial = new THREE.LineBasicMaterial({ color: 0x00d4ff, transparent: true, opacity: 0 });
     const frames: THREE.LineLoop[] = ARTBOARDS.map(({ x, y, w, h }) => {
       const g = new THREE.BufferGeometry().setFromPoints([
         new THREE.Vector3(x, y, 0.01),

@@ -6,37 +6,37 @@ export default function Work() {
   return (
     <section className="section" id="work" aria-labelledby="work-title">
       <div className="container">
-        <h2 className="section-title" id="work-title">
-          Selected work
-        </h2>
-        <ul className="work-list">
-          {projects.map((p) => (
-            <li className="work-item" key={p.url}>
-              <a href={p.url} target="_blank" rel="noopener noreferrer">
-                <div>
-                  <h3 className="work-name">{p.name}</h3>
-                  <span className="work-domain">{domain(p.url)}</span>
+        <div className="section-header">
+          <span className="section-tag">02 — Work</span>
+          <h2 className="section-title" id="work-title">
+            Featured Projects
+          </h2>
+        </div>
+        <div className="projects-grid">
+          {projects.map((p, i) => (
+            <a className="project-card" href={p.url} target="_blank" rel="noopener noreferrer" key={p.url}>
+              <div className={`project-thumb thumb-${i % 4}`}>
+                {p.image && <img src={p.image} alt={`${p.name} homepage`} loading="lazy" />}
+                <div className="project-overlay">
+                  <span className="proj-link">Visit site</span>
                 </div>
-                <div className="work-meta">
-                  <p className="work-summary">{p.summary}</p>
-                  {p.tags.length > 0 && (
-                    <ul className="work-tags" aria-label="Built with">
-                      {p.tags.map((t) => (
-                        <li key={t}>{t}</li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-                <span className="work-arrow" aria-hidden="true">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <path d="M5 13L13 5M13 5H6.5M13 5V11.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-                <span className="sr-only"> (opens in a new tab)</span>
-              </a>
-            </li>
+              </div>
+              <div className="project-body">
+                {p.tags.length > 0 && (
+                  <div className="proj-chips" aria-label="Built with">
+                    {p.tags.map((t) => (
+                      <span key={t}>{t}</span>
+                    ))}
+                  </div>
+                )}
+                <h3>{p.name}</h3>
+                <span className="work-domain">{domain(p.url)}</span>
+                <p>{p.summary}</p>
+              </div>
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );

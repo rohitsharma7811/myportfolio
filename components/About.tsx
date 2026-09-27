@@ -1,54 +1,58 @@
-"use client";
+import { profile, stats, skills } from "@/lib/data";
 
-import { useRef } from "react";
-import { profile, stats } from "@/lib/data";
-import { gsap, useGSAP, prefersReducedMotion } from "@/lib/gsap";
+const chips = skills.flatMap((g) => g.items).slice(0, 8);
+const years = stats.find((s) => s.label.includes("year")) ?? stats[0];
 
 export default function About() {
-  const root = useRef<HTMLElement>(null);
-
-  useGSAP(
-    () => {
-      if (prefersReducedMotion()) return;
-      // Numbers count up once, when the facts scroll into view.
-      gsap.utils.toArray<HTMLElement>(".fact-value [data-to]").forEach((el) => {
-        const to = Number(el.dataset.to);
-        const counter = { v: 0 };
-        el.textContent = "0";
-        gsap.to(counter, {
-          v: to,
-          duration: 1.6,
-          ease: "power2.out",
-          scrollTrigger: { trigger: el, start: "top 85%", once: true },
-          onUpdate: () => (el.textContent = String(Math.round(counter.v))),
-        });
-      });
-    },
-    { scope: root }
-  );
-
   return (
-    <section className="section" id="about" ref={root} aria-labelledby="about-title">
+    <section className="section" id="about" aria-labelledby="about-title">
       <div className="container">
-        <h2 className="section-title" id="about-title">
-          From design file to working website
-        </h2>
+        <div className="section-header">
+          <span className="section-tag">01 — About</span>
+          <h2 className="section-title" id="about-title">
+            Who I Am
+          </h2>
+        </div>
         <div className="about-grid">
-          <ul className="facts">
-            {stats.map((s) => (
-              <li className="fact" key={s.label}>
-                <span className="fact-value">
-                  <span data-to={s.value}>{s.value}</span>
-                  {s.suffix}
-                </span>
-                <span className="fact-label">{s.label}</span>
-              </li>
-            ))}
-          </ul>
-          <div className="about-copy">
+          <div className="about-img-wrap">
+            <div className="about-img-frame">
+              <img className="about-photo" src="/rohit-photo.png" alt={profile.name} />
+              <div className="img-glow" aria-hidden="true" />
+            </div>
+            <div className="exp-badge">
+              <span className="exp-num">
+                {years.value}
+                {years.suffix}
+              </span>
+              <span className="exp-label">
+                Years of
+                <br />
+                Experience
+              </span>
+            </div>
+          </div>
+
+          <div className="about-body">
+            <h3 className="about-sub">
+              Building the future,
+              <br />
+              one component at a time.
+            </h3>
             {profile.about.map((p) => (
-              <p key={p}>{p}</p>
+              <p className="about-text" key={p}>
+                {p}
+              </p>
             ))}
+            <div className="tag-list">
+              {chips.map((c) => (
+                <span className="chip" key={c}>
+                  {c}
+                </span>
+              ))}
+            </div>
+            <a className="btn btn-solid" href={profile.cvUrl} download style={{ marginTop: "2rem" }}>
+              Download CV
+            </a>
           </div>
         </div>
       </div>

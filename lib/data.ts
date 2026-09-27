@@ -34,12 +34,15 @@ export const stats = [
   { value: 50, suffix: "+", label: "websites shipped" },
 ];
 
+// `image` is an optional thumbnail (drop a file into /public/projects and point to it here).
+// Left blank, the card falls back to a gradient placeholder.
 export const projects = [
   {
     name: "Exclusive Markets",
     url: "https://exclusivemarkets.com/",
     summary: "Main company website, built from Figma as a fully responsive front-end.",
     tags: ["Figma", "HTML5", "CSS3", "JavaScript", "Bootstrap 5"],
+    image: "/projects/exclusive-markets.webp",
   },
   {
     name: "Exclusive Markets Prime",
@@ -47,6 +50,7 @@ export const projects = [
     summary:
       "Prime trading platform website for Exclusive Markets, built on Next.js with a Payload CMS backend for content management.",
     tags: ["Figma", "Next.js", "Payload CMS"],
+    image: "/projects/exclusive-markets-prime.webp",
   },
   {
     name: "Avrion Risk",
@@ -54,6 +58,7 @@ export const projects = [
     summary:
       "Risk management platform website, converted from Figma designs into a responsive Next.js front-end backed by Payload CMS.",
     tags: ["Figma", "Next.js", "Payload CMS"],
+    image: "/projects/avrion-risk.png",
   },
   {
     name: "Exca Prime",
@@ -61,6 +66,7 @@ export const projects = [
     summary:
       "Brand website for Exca Prime, hand-coded from Figma designs into a fully responsive front-end.",
     tags: ["Figma", "HTML5", "CSS3", "JavaScript", "Bootstrap 5"],
+    image: "/projects/exca-prime.webp",
   },
   {
     name: "Exclusive Markets Education",
@@ -68,6 +74,7 @@ export const projects = [
     summary:
       "Education portal for Exclusive Markets, built on Next.js with Payload CMS to manage course and learning content.",
     tags: ["Figma", "Next.js", "Payload CMS"],
+    image: "/projects/exclusive-markets-education.png",
   },
 ];
 
@@ -127,9 +134,30 @@ export const experience = [
   },
 ];
 
+// `level` is a self-rated 0-100 confidence score shown as a progress bar — adjust freely.
 export const skills = [
-  { group: "Frameworks", items: ["React.js", "Next.js", "Angular", "Bootstrap 3–5"] },
-  { group: "Core", items: ["HTML5", "CSS3", "JavaScript", "jQuery"] },
-  { group: "CMS & landing pages", items: ["Payload CMS", "WordPress", "Webflow", "Unbounce", "Elementor", "Divi"] },
-  { group: "Design", items: ["Figma", "Adobe XD", "Photoshop"] },
+  {
+    group: "Frontend Development",
+    description: "React, Next.js and Angular — building fast, responsive interfaces from pixel-perfect designs.",
+    level: 95,
+    items: ["React.js", "Next.js", "Angular", "Bootstrap 3–5"],
+  },
+  {
+    group: "Core Web",
+    description: "The fundamentals I've relied on for 13+ years, still the backbone of every build.",
+    level: 95,
+    items: ["HTML5", "CSS3", "JavaScript", "jQuery"],
+  },
+  {
+    group: "CMS & Landing Pages",
+    description: "Payload CMS, WordPress and no-code builders for marketing sites and campaigns.",
+    level: 85,
+    items: ["Payload CMS", "WordPress", "Webflow", "Unbounce", "Elementor", "Divi"],
+  },
+  {
+    group: "Design",
+    description: "Turning Figma, XD and Photoshop files into code without losing the details.",
+    level: 90,
+    items: ["Figma", "Adobe XD", "Photoshop"],
+  },
 ];
