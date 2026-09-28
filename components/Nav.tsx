@@ -25,7 +25,7 @@ export default function Nav() {
             <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
             <li>
-              <a className="btn btn-ghost" href="#contact">Contact me</a>
+              <a className="btn btn-ghost" href="#contact">Hire me</a>
             </li>
           </ul>
         </nav>
