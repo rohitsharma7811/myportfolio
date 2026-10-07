@@ -52,11 +52,24 @@ export default function Experience() {
                   {job.company}
                   {job.note && <small> ({job.note})</small>}
                 </p>
-                <ul className="job-points">
-                  {job.points.map((pt) => (
-                    <li key={pt}>{pt}</li>
-                  ))}
-                </ul>
+                {job.groups ? (
+                  job.groups.map((g) => (
+                    <div key={g.label}>
+                      <span className="job-group-label">{g.label}</span>
+                      <ul className="job-points">
+                        {g.points.map((pt) => (
+                          <li key={pt}>{pt}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))
+                ) : (
+                  <ul className="job-points">
+                    {job.points?.map((pt) => (
+                      <li key={pt}>{pt}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </li>
           ))}

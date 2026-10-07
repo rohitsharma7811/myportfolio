@@ -82,55 +82,93 @@ export const experience = [
   {
     role: "Lead Frontend Engineer",
     company: "Nexclusive Tech Dynamics",
-    note: "formerly DayNight Consultants",
+    note: "formerly DayNight Consultants; business handed over",
     period: "Mar 2023 – Present",
-    points: [
-      "Revamped the company website on Payload CMS with a Next.js front-end.",
-      "Build marketing landing pages in Webflow and Unbounce.",
-      "Convert Figma designs into pixel-perfect, responsive interfaces.",
+    groups: [
+      {
+        label: "Leadership",
+        points: [
+          "Lead the frontend team: plan and assign work, review code and set the standards for UI quality, responsiveness and performance.",
+          "Act as the main point of contact for clients, gathering requirements, sharing progress and turning feedback into clear development tasks.",
+          "Work closely with management on scope, priorities and timelines, and deliver projects on schedule from design hand-off to launch.",
+          "Guide and support developers on the team, helping them solve technical problems and keep work consistent across projects.",
+        ],
+      },
+      {
+        label: "Development",
+        points: [
+          "Led the revamp of the company website on Payload CMS, a headless, TypeScript-based CMS built on Next.js, giving the content team easy, structured editing while the front-end stays fast, SEO-friendly and fully custom.",
+          "Build and launch high-converting marketing landing pages with Webflow and Unbounce, enabling quick campaign launches and A/B testing.",
+          "Convert Figma designs into pixel-perfect, responsive interfaces using Tailwind CSS and Bootstrap 5.",
+          "Delivered front-ends for exclusivemarkets.com and its related platforms.",
+        ],
+      },
     ],
   },
   {
     role: "UI Developer",
     company: "Intellolabs",
     period: "Oct 2022 – Jan 2023",
-    points: ["Customised WordPress websites and built responsive Bootstrap pages."],
+    points: [
+      "Developed and customised WordPress websites, adapting themes, layouts and plugins to each client's requirements.",
+      "Converted PSD designs into responsive, cross-browser Bootstrap pages.",
+    ],
   },
   {
     role: "UI Developer",
     company: "TechGenies India",
     period: "Jun 2020 – Sep 2022",
-    points: ["Built WordPress sites with Divi and Elementor, and responsive pages from XD designs."],
+    points: [
+      "Built and maintained WordPress websites with Divi and Elementor, turning Adobe XD designs into responsive, easy-to-edit sites.",
+      "Developed HubSpot websites and landing pages using HubSpot CMS templates and modules.",
+      "Created custom HTML5/CSS3 websites with Bootstrap from XD and PSD designs, including network.nurseslounge.com.",
+    ],
   },
   {
     role: "UI Developer",
     company: "QuayInTech",
     period: "May 2019 – Mar 2020",
-    points: ["Converted PSD designs into standards-compliant responsive pages."],
+    points: [
+      "Converted PSD designs into responsive, standards-compliant HTML5/CSS3 pages with Bootstrap.",
+      "Worked with back-end developers to integrate the front-end and fix cross-browser and mobile layout issues.",
+    ],
   },
   {
     role: "UI Developer",
     company: "QuadLabs Technologies",
     period: "Jun 2017 – Mar 2019",
-    points: ["Designed interfaces in Photoshop and coded them in HTML5 and CSS3."],
+    points: [
+      "Designed web interfaces in Photoshop and coded them into responsive HTML5/CSS3 with Bootstrap.",
+      "Built front-ends for travel and e-commerce websites, working alongside the .NET development team.",
+    ],
   },
   {
     role: "Associate UI Designer",
     company: "Xcelserv Solutions",
+    note: "incl. sister concern Fiercehound Media",
     period: "Apr 2016 – Jun 2017",
-    points: ["Designed client UIs and built them as responsive front-ends."],
+    points: [
+      "Designed client website UIs in Photoshop and built them as responsive Bootstrap front-ends.",
+      "Handled both design and front-end development for client projects, from first mock-up to live site.",
+    ],
   },
   {
     role: "Web Designer",
     company: "Netscape India",
     period: "Sep 2015 – Mar 2016",
-    points: ["Created website designs and converted them to responsive HTML/CSS."],
+    points: [
+      "Created website designs in Photoshop and converted them into responsive HTML5/CSS3 with Bootstrap.",
+      "Updated and maintained existing client websites with layout changes and fixes.",
+    ],
   },
   {
     role: "Web Designer",
     company: "Avis Technology",
     period: "May 2013 – Jul 2015",
-    points: ["Where it started: designing sites in Photoshop and hand-coding them."],
+    points: [
+      "Started my career designing websites in Photoshop and hand-coding them into HTML/CSS layouts.",
+      "Learned the full design-to-code workflow on websites for small businesses.",
+    ],
   },
 ];
 
@@ -140,7 +178,7 @@ export const skills = [
     group: "Frontend Development",
     description: "React, Next.js and Angular — building fast, responsive interfaces from pixel-perfect designs.",
     level: 95,
-    items: ["React.js", "Next.js", "Angular", "Bootstrap 3–5"],
+    items: ["React.js", "Next.js", "Angular", "Tailwind CSS", "Bootstrap 3–5"],
   },
   {
     group: "Core Web",
@@ -152,7 +190,7 @@ export const skills = [
     group: "CMS & Landing Pages",
     description: "Payload CMS, WordPress and no-code builders for marketing sites and campaigns.",
     level: 85,
-    items: ["Payload CMS", "WordPress", "Webflow", "Unbounce", "Elementor", "Divi"],
+    items: ["Payload CMS", "WordPress", "HubSpot CMS", "Webflow", "Unbounce", "Elementor", "Divi"],
   },
   {
     group: "Design",
