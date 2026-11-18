@@ -1,4 +1,4 @@
-import { projects } from "@/lib/data";
+import { moreWorkNote, projects } from "@/lib/data";
 
 const domain = (url: string) => url.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
 
@@ -37,6 +37,7 @@ export default function Work() {
             </a>
           ))}
         </div>
+        <p className="more-work">{moreWorkNote}</p>
       </div>
     </section>
   );

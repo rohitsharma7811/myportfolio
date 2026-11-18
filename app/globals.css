@@ -870,25 +870,21 @@ a {
   margin: 0 0 20px;
 }
 
-.sk-bar-wrap {
-  height: 4px;
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 2px;
-  overflow: hidden;
-  margin-bottom: 8px;
+.skill-card .sk-impact {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--paper);
+  margin: 0;
+  padding-left: 12px;
+  border-left: 2px solid var(--teal);
 }
 
-.sk-bar {
-  height: 100%;
-  width: 0;
-  background: linear-gradient(to right, var(--teal), var(--cobalt));
-  border-radius: 2px;
-}
-
-.sk-pct {
+.more-work {
+  margin: clamp(28px, 4vw, 40px) 0 0;
+  text-align: center;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--teal);
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
 .sk-tags {

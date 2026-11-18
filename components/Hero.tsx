@@ -68,7 +68,7 @@ export default function Hero() {
         </div>
         <p className="hero-greeting">Hello, I&apos;m</p>
         <h1 className="hero-name" aria-label={profile.name}>
-          <span className="line">{splitChars(profile.firstName)}</span>
+          <span className="line">{splitChars(profile.firstName)}</span>{" "}
           <span className="line">{splitChars(profile.lastName)}</span>
         </h1>
         <p className="hero-role-line">

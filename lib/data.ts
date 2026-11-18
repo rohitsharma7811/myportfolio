@@ -76,7 +76,38 @@ export const projects = [
     tags: ["Figma", "Next.js", "Payload CMS"],
     image: "/projects/exclusive-markets-education.png",
   },
+  {
+    name: "SkySouq",
+    url: "https://skysouq.com/",
+    summary: "Online travel agency in Oman for booking flights, hotels and holidays, with a responsive booking front-end.",
+    tags: ["Photoshop", "HTML5", "CSS3", "Bootstrap"],
+    image: "",
+  },
+  {
+    name: "Dwidaya Tour",
+    url: "https://dwidayatour.co.id/",
+    summary: "Indonesian travel agency website selling flights, hotels and tour packages, with member sign-up and booking flows.",
+    tags: ["Photoshop", "HTML5", "CSS3", "Bootstrap"],
+    image: "",
+  },
+  {
+    name: "Diesel Fuel Injection Parts",
+    url: "https://dieselfuelinjectionparts.com/",
+    summary: "Product catalogue website for an Indian manufacturer and exporter of diesel fuel injection parts.",
+    tags: ["Photoshop", "HTML5", "CSS3", "Bootstrap"],
+    image: "",
+  },
+  {
+    name: "Cropsafe Pesticides",
+    url: "https://cropsafepesticides.com/",
+    summary: "Company website for a crop-protection and pesticides brand, designed and built as a responsive front-end.",
+    tags: ["Photoshop", "HTML5", "CSS3", "Bootstrap"],
+    image: "",
+  },
 ];
+
+// Shown under the project grid so the "50+ websites" stat is backed up.
+export const moreWorkNote = "Plus 40+ more websites delivered for clients across 8 companies since 2013.";
 
 export const experience = [
   {
@@ -172,30 +203,31 @@ export const experience = [
   },
 ];
 
-// `level` is a self-rated 0-100 confidence score shown as a progress bar — adjust freely.
+// `impact` is one line on what this skill delivered. Swap in real numbers when you
+// have them (e.g. "Cut page load from 4.1s to 2.3s on exclusivemarkets.com").
 export const skills = [
   {
     group: "Frontend Development",
     description: "React, Next.js and Angular — building fast, responsive interfaces from pixel-perfect designs.",
-    level: 95,
+    impact: "Shipped Exclusive Markets Prime, Avrion Risk and EM Education on Next.js + Payload CMS.",
     items: ["React.js", "Next.js", "Angular", "Tailwind CSS", "Bootstrap 3–5"],
   },
   {
     group: "Core Web",
     description: "The fundamentals I've relied on for 13+ years, still the backbone of every build.",
-    level: 95,
+    impact: "50+ live websites hand-coded to work across browsers and screen sizes.",
     items: ["HTML5", "CSS3", "JavaScript", "jQuery"],
   },
   {
     group: "CMS & Landing Pages",
     description: "Payload CMS, WordPress and no-code builders for marketing sites and campaigns.",
-    level: 85,
+    impact: "Webflow and Unbounce landing pages that let marketing launch and A/B test campaigns without a developer.",
     items: ["Payload CMS", "WordPress", "HubSpot CMS", "Webflow", "Unbounce", "Elementor", "Divi"],
   },
   {
     group: "Design",
     description: "Turning Figma, XD and Photoshop files into code without losing the details.",
-    level: 90,
+    impact: "Took designs from mock-up to live site at 8 companies, often designing the UI myself.",
     items: ["Figma", "Adobe XD", "Photoshop"],
   },
 ];

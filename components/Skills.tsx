@@ -1,8 +1,4 @@
-"use client";
-
-import { useRef } from "react";
 import { skills } from "@/lib/data";
-import { gsap, useGSAP, prefersReducedMotion } from "@/lib/gsap";
 
 const icons = [
   // Frontend Development
@@ -29,25 +25,8 @@ const icons = [
 ];
 
 export default function Skills() {
-  const root = useRef<HTMLElement>(null);
-
-  useGSAP(
-    () => {
-      if (prefersReducedMotion()) return;
-      gsap.utils.toArray<HTMLElement>(".sk-bar").forEach((el) => {
-        gsap.to(el, {
-          width: `${el.dataset.w}%`,
-          duration: 1.3,
-          ease: "power2.out",
-          scrollTrigger: { trigger: el, start: "top 90%", once: true },
-        });
-      });
-    },
-    { scope: root }
-  );
-
   return (
-    <section className="section" id="skills" ref={root} aria-labelledby="skills-title">
+    <section className="section" id="skills" aria-labelledby="skills-title">
       <div className="container">
         <h2 className="section-title" id="skills-title">
           What I work with
@@ -58,10 +37,7 @@ export default function Skills() {
               <div className="sk-icon">{icons[i % icons.length]}</div>
               <h3>{s.group}</h3>
               <p>{s.description}</p>
-              <div className="sk-bar-wrap">
-                <div className="sk-bar" data-w={s.level} />
-              </div>
-              <span className="sk-pct">{s.level}%</span>
+              <p className="sk-impact">{s.impact}</p>
               <ul className="sk-tags" aria-label={`${s.group} tools`}>
                 {s.items.map((item) => (
                   <li key={item}>{item}</li>
