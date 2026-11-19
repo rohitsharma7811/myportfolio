@@ -13,7 +13,7 @@ export const profile = {
     "I started as a web designer in 2013, drawing layouts in Photoshop and hand-coding them. Thirteen years later I still care about the same thing: the build should look exactly like the design, and feel better than it.",
     "Today I lead frontend work at Nexclusive Tech Dynamics, building with React, Next.js and Payload CMS, and shipping marketing landing pages in Webflow and Unbounce.",
   ],
-  email: "rohit.sharma7811@gmail.com",
+  email: "sharmarohit7811@gmail.com",
   phone: "+91 98038 41676",
   whatsapp: "919803841676", // phone in international format, no + or spaces, used for the wa.me link
   location: "Gurugram, India",
